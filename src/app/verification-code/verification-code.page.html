@@ -1,0 +1,26 @@
+<div>
+  <div class="margin-top-100">
+    <p class="text-center font-family">Nous vous avons envoyé un code</p>
+    <div class="text-center font-family-regular">
+      <span>le code a été envoyé à </span> <span>+21628409723</span>
+    </div>
+    <p class="text-center font-family-regular">Renvoyer le code dans 20 s</p>
+  </div>
+
+  <form [formGroup]="verificationForm">
+    <ion-list lines="none">
+      <ion-item>
+        <ion-input
+          formControlName="code"
+          type="text"
+          fill="outline"
+          class="input-style"
+        ></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+
+  <div class="text-center">
+    <button>Vérifier</button>
+  </div>
+</div>

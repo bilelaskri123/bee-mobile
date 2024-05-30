@@ -1,0 +1,31 @@
+<div>
+  <div class="logo-margin">
+    <ion-img class="bee-logo" src="assets/images/bee-blue.png" alt=""></ion-img>
+  </div>
+
+  <p class="font-family-regular text-center insert-number-text">
+    Insérer votre numéro mobile
+  </p>
+  <form [formGroup]="phoneForm" class="mt-40">
+    <ion-list lines="none">
+      <ion-label class="font-family label-margin"
+        >Numéro de téléphone</ion-label
+      >
+      <ion-item>
+        <ion-input
+          formControlName="phone"
+          type="tel"
+          placeholder="+21628409723"
+          fill="outline"
+          class="input-margin"
+        ></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+
+  <div class="text-center mt-25">
+    <button class="save-button font-family button-shadow">
+      Envoyer le code
+    </button>
+  </div>
+</div>

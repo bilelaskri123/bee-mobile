@@ -1,0 +1,14 @@
+.page {
+  background-color: #3c3188;
+  height: 100%;
+}
+
+.image-position {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

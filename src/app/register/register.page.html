@@ -1,0 +1,105 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
+<div>
+  <h1 class="text-center font-family welcome-text">Bienvenu,</h1>
+  <div class="d-flex center-block">
+    <p class="font-family-regular text-size">Commençons par nous</p>
+    <ion-img
+      class="hand-image-size"
+      src="assets/images/hand.png"
+      alt=""
+    ></ion-img>
+  </div>
+
+  <form [formGroup]="registerForm">
+    <ion-list lines="none">
+      <div class="space-between-inputs">
+        <ion-label class="font-family text-size label-margin-left-20"
+          >Nom et prénom</ion-label
+        >
+        <ion-item>
+          <ion-input
+            formControlName="username"
+            type="text"
+            fill="outline"
+            class="input-style"
+          ></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="space-between-inputs">
+        <ion-label class="font-family text-size label-margin-left-20"
+          >Numéro CIN</ion-label
+        >
+        <ion-item>
+          <ion-input
+            formControlName="cin"
+            type="text"
+            fill="outline"
+          ></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="space-between-inputs">
+        <ion-label class="font-family text-size label-margin-left-20"
+          >Email</ion-label
+        >
+        <ion-item>
+          <ion-input
+            formControlName="email"
+            type="text"
+            fill="outline"
+          ></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="space-between-inputs">
+        <ion-label class="font-family text-size label-margin-left-20"
+          >Mot de passe</ion-label
+        >
+        <ion-item>
+          <ion-input
+            formControlName="password"
+            type="password"
+            fill="outline"
+            placeholder="Mot de passe"
+          >
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-item>
+      </div>
+
+      <div class="space-between-inputs">
+        <ion-label class="font-family text-size label-margin-left-20"
+          >Confirmez le mot de passe</ion-label
+        >
+        <ion-item>
+          <ion-input
+            type="password"
+            formControlName="confirmPassword"
+            fill="outline"
+            placeholder="Confirmez Mot de passe"
+          >
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-item>
+      </div>
+    </ion-list>
+
+    <div class="text-center">
+      <button class="save-button">Commencer</button>
+    </div>
+  </form>
+</div>
