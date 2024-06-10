@@ -16,4 +16,32 @@
   <div class="image-position">
     <img src="assets/images/logo-bee.png" alt="">
   </div>
+
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <div class="page">
+        <p class="close-button" (click)="closeModal(false)">
+          <ion-icon name="close-circle-outline" size="large" color="light" class="close-icon"></ion-icon>
+        </p>
+        <div class="logo-bee">
+          <img src="assets/images/bee.png" alt="" />
+        </div>
+
+        <ion-grid class="grid-margin-top">
+          <ion-row>
+            <ion-col size="auto">
+              <ion-text class="level-up-text">
+                <h2 class="text-size">Level Up</h2>
+                <h2 class="text-size">Your</h2>
+                <h2 class="text-size">Everyday</h2>
+              </ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-img src="assets/images/phone.png" alt="" srcset=""></ion-img>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ng-template>
+  </ion-modal>
 </div>
