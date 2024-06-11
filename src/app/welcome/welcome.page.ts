@@ -14,6 +14,9 @@ export class WelcomePage implements OnInit {
 
   ngOnInit() {
     console.log('ngOninit welcome page');
+    setTimeout(() => {
+      this.setOpen(true);
+    }, 1500);
   }
 
   setOpen(isOpen: boolean) {
