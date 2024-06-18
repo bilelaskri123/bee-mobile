@@ -21,6 +21,8 @@ export class WelcomePage implements OnInit {
 
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
+    console.log();
+    
   }
 
   closeModal(isOpen: boolean) {
