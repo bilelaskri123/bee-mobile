@@ -1,0 +1,71 @@
+.title{
+position: absolute;
+width: 150px;
+height: 68px;
+left: calc(50% - 150px/2);
+top: 65px;
+
+font-family: NeoSansProRegular ;
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 34px;
+text-align: center;
+font-weight: bolder;
+
+color: #34A853;
+}
+
+.footer-title{
+/* Vous y êtes! */
+position: absolute;
+left: calc(50% - 150px/2);
+width: 166px;
+height: 34px;
+font-family: NeoSansProRegular;
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 34px;
+text-align: center;
+color: #171717;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.text{
+/* Nous espérons que vous passerez un moment fantastique à explorer et à vous connecter avec notre communauté dynamique. */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 276px;
+  height: 39px;
+  font-family: 'Neo Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  color: #171717;
+}
+
+.text-center {
+    text-align: center;
+  }
+.save-button {
+    width: 185px;
+    height: 40px;
+    margin: auto;
+    background-color: #34a853;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  

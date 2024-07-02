@@ -36,7 +36,15 @@ const routes: Routes = [
   {
     path: 'verification-code',
     loadChildren: () => import('./verification-code/verification-code.module').then( m => m.VerificationCodePageModule)
+  },  {
+    path: 'dashboard-menu',
+    loadChildren: () => import('./dashboard-menu/dashboard-menu.module').then( m => m.DashboardMenuPageModule)
   },
+  {
+    path: 'account',
+    loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
+  },
+
 ];
 
 @NgModule({
