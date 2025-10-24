@@ -1,2 +1,12 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+@font-face {
+  font-family: "NeoSansProRegular";
+  src: url("assets/fonts/neo-sans-pro/NeoSansProRegular.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: "NeoSansProMedium";
+  src: url("assets/fonts/neo-sans-pro/NeoSansProMedium.OTF") format("opentype");
+}

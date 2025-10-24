@@ -36,24 +36,15 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
 
-@font-face {
-  font-family: "NeoSansProRegular";
-  src: url("assets/fonts/NeoSansProRegular.OTF") format("truetype");
+.text-center {
+  text-align: center;
 }
 
-@font-face {
-  font-family: "NeoSansProMedium";
-  src: url("assets/fonts//NeoSansProMedium.OTF") format("truetype");
+ion-toolbar {
+  --background: #0f4ba7;
+  --color: white;
 }
 
 .font-family {
-  font-family: NeoSansProMedium;
-}
-
-.font-family-regular {
-  font-family: NeoSansProRegular;
-}
-
-.text-center {
-  text-align: center;
+  font-family: "NeoSansProRegular", serif;
 }
