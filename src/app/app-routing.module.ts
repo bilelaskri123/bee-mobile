@@ -57,27 +57,40 @@ const routes: Routes = [
     path: 'account',
     loadChildren: () =>
       import('./account/account.module').then((m) => m.AccountPageModule),
-  },  {
+  },
+  {
     path: 'add-abonnement',
-    loadChildren: () => import('./add-abonnement/add-abonnement.module').then( m => m.AddAbonnementPageModule)
+    loadChildren: () =>
+      import('./add-abonnement/add-abonnement.module').then(
+        (m) => m.AddAbonnementPageModule
+      ),
   },
   {
     path: 'factures',
-    loadChildren: () => import('./factures/factures.module').then( m => m.FacturesPageModule)
+    loadChildren: () =>
+      import('./factures/factures.module').then((m) => m.FacturesPageModule),
   },
   {
     path: 'paiement-express',
-    loadChildren: () => import('./paiement-express/paiement-express.module').then( m => m.PaiementExpressPageModule)
+    loadChildren: () =>
+      import('./paiement-express/paiement-express.module').then(
+        (m) => m.PaiementExpressPageModule
+      ),
   },
   {
     path: 'assistance',
-    loadChildren: () => import('./assistance/assistance.module').then( m => m.AssistancePageModule)
+    loadChildren: () =>
+      import('./assistance/assistance.module').then(
+        (m) => m.AssistancePageModule
+      ),
   },
   {
     path: 'abonne-clic',
-    loadChildren: () => import('./abonne-clic/abonne-clic.module').then( m => m.AbonneClicPageModule)
+    loadChildren: () =>
+      import('./abonne-clic/abonne-clic.module').then(
+        (m) => m.AbonneClicPageModule
+      ),
   },
-
 ];
 
 @NgModule({

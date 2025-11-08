@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./abonne-clic.page.scss'],
 })
 export class AbonneClicPage implements OnInit {
+  offers: string[] = ['ADSL', 'VDSL', 'BEEFIBRE'];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
