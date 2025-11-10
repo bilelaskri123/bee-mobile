@@ -1,0 +1,39 @@
+<div>
+  <ion-loading
+    message="Loading..."
+    [duration]="3000"
+    spinner="circles"
+  ></ion-loading>
+</div>
+
+<form [formGroup]="searchForm" class="m-4">
+  <ion-input
+    label="Numéro ADSL"
+    label-placement="floating"
+    fill="outline"
+    placeholder="77XXXXXX"
+    formControlName="fixNumber"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Numéro CIN"
+    label-placement="floating"
+    fill="outline"
+    placeholder="12345678"
+    formControlName="cin"
+    class="text-font-family"
+  ></ion-input>
+</form>
+
+<ion-footer class="my-custom-footer ion-no-border footer-position">
+  <div class="text-center">
+    <button
+      class="btn btn-custom text-font-family"
+      type="submit"
+      (click)="onSubmit()"
+    >
+      Valider
+    </button>
+  </div>
+</ion-footer>

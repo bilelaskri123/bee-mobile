@@ -8,9 +8,27 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">paiement-express</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="m-4">
+    <ion-input
+      label="Numéro ADSL"
+      label-placement="floating"
+      fill="outline"
+      placeholder="77XXXXXX"
+      class="input-margin text-font-family"
+    ></ion-input>
+
+    <ion-input
+      label="Numéro CIN"
+      label-placement="floating"
+      fill="outline"
+      placeholder="12345678"
+      class="text-font-family"
+    ></ion-input>
+  </div>
 </ion-content>
+
+<ion-footer class="my-custom-footer ion-no-border">
+  <div class="text-center">
+    <button class="btn btn-custom text-font-family">Valider</button>
+  </div>
+</ion-footer>

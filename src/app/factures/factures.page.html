@@ -7,10 +7,10 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">factures</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content> -->
+<ion-content [fullscreen]="true">
+  @if (step == 1) {
+  <app-facture-form (formChange)="handleFormChange($event)"></app-facture-form>
+  }@else {
+  <app-facture-list></app-facture-list>
+  }
+</ion-content>

@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./factures.page.scss'],
 })
 export class FacturesPage implements OnInit {
+  step: number = 1;
+  fixeNumber: string = '';
+  cin: string = '';
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  handleFormChange(event: { fixNumber: string; cin: string }) {
+    console.log('Form Data:', event);
+    this.fixeNumber = event.fixNumber;
+    this.cin = event.cin;
+    this.step = 2;
   }
-
 }
