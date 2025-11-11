@@ -1,0 +1,55 @@
+ion-fab-button {
+  --background: #0f4ba7;
+  --border-radius: 15px;
+  --box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --color: white;
+}
+
+.close-button {
+  --color: #b7b6af;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+ion-modal {
+  padding-top: 20px;
+}
+
+ion-modal::part(content) {
+  border-radius: 15px;
+}
+
+// Form Styles
+.input-margin {
+  margin-bottom: 10px;
+}
+
+.my-custom-footer {
+  margin-bottom: 20px;
+}
+
+.text-font-family {
+  font-family: "NeoSansProRegular", serif;
+}
+
+.btn-custom {
+  width: 185px;
+  height: 40px;
+  margin: auto;
+  background-color: #34a853;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.footer-position {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}

@@ -1,16 +1,140 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button default-href="/dashboard-menu"></ion-back-button>
-    </ion-buttons>
-    <ion-title class="text-white font-family">Assistance</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<div class="ion-page" #page>
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Assistance</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button default-href="/dashboard-menu"></ion-back-button>
+      </ion-buttons>
+      <ion-title class="text-white font-family">Assistance</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+
+  <ion-content [fullscreen]="true">
+    <!-- Modal -->
+    <ion-modal
+      trigger="open-modal"
+      (willDismiss)="onWillDismiss($event)"
+      [presentingElement]="page"
+    >
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="end">
+              <ion-button (click)="cancel()" class="close-button">
+                <ion-icon name="close-circle-outline"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+            <ion-title>Nouvelle Réclamation</ion-title>
+            <!-- <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons> -->
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <form [formGroup]="reclamationForm" class="m-4">
+            <ion-input
+              label="Numéro fixe"
+              label-placement="floating"
+              fill="outline"
+              placeholder="77XXXXXX"
+              class="input-margin text-font-family"
+            ></ion-input>
+
+            <ion-input
+              label="Service"
+              label-placement="floating"
+              fill="outline"
+              placeholder="12345678"
+              class="input-margin text-font-family"
+            ></ion-input>
+
+            <ion-input
+              label="Type d'abonnement"
+              label-placement="floating"
+              fill="outline"
+              placeholder="12345678"
+              class="input-margin text-font-family"
+            ></ion-input>
+
+            <ion-input
+              label="Motif de la réclamation"
+              label-placement="floating"
+              fill="outline"
+              placeholder="12345678"
+              class="input-margin text-font-family"
+            ></ion-input>
+
+            <ion-input
+              label="Numéro GSM"
+              label-placement="floating"
+              fill="outline"
+              placeholder="12345678"
+              class="input-margin text-font-family"
+            ></ion-input>
+
+            <ion-textarea
+              label="Message"
+              labelPlacement="floating"
+              fill="outline"
+              placeholder="Enter text"
+              class="input-margin text-font-family"
+            ></ion-textarea>
+
+            <ion-input
+              label="Joindre un fichier"
+              label-placement="floating"
+              fill="outline"
+              placeholder="12345678"
+              class="input-margin text-font-family"
+            ></ion-input>
+
+            <div class="text-center margin-top-40">
+              <button
+                class="btn btn-custom text-font-family"
+                type="submit"
+                (click)="onSubmit()"
+              >
+                Envoyer
+              </button>
+            </div>
+          </form>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    @for (ticket of tickets; track ticket.id) {
+    <ion-card class="card-bg font-family">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-label>Suject: </ion-label> <span> {{ ticket.subject}} </span>
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-label>Numéro Fixe: </ion-label> <span>{{ticket.fixedNumber}}</span>
+        <br />
+        <ion-label>Type d'abonnement: </ion-label>
+        <span>{{ticket.subscriptionType}}</span>
+        <br />
+        <ion-label>Date: </ion-label> <span> {{ticket.creationDate}} </span>
+        <br />
+        <ion-label>Status: </ion-label>
+        <span
+          class="status"
+          [ngClass]="ticket.status === 'Payée' ? 'paid' : 'unpaid'"
+          >{{ticket.status}}</span
+        >
+      </ion-card-content>
+    </ion-card>
+    } @empty {
+    <div class="text-center mt-5">
+      <ion-label class="text-font-family">Aucun ticket trouvé.</ion-label>
+    </div>
+    }
+
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed" id="open-modal">
+      <ion-fab-button size="small">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+</div>
