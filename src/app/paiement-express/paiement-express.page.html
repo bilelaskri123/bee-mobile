@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<!-- <ion-content [fullscreen]="true">
   <div class="m-4">
     <ion-input
       label="Numéro ADSL"
@@ -31,4 +31,14 @@
   <div class="text-center">
     <button class="btn btn-custom text-font-family">Valider</button>
   </div>
-</ion-footer>
+</ion-footer> -->
+
+<ion-content [fullscreen]="true">
+  @if (step == 1) {
+  <app-paiement-express-form
+    (formChange)="handleFormChange($event)"
+  ></app-paiement-express-form>
+  }@else {
+  <app-paiement-express-list></app-paiement-express-list>
+  }
+</ion-content>

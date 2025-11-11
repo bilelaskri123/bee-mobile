@@ -1,0 +1,27 @@
+@for (facture of factures; track facture.id) {
+<ion-card class="card-bg font-family">
+  <ion-card-header>
+    <ion-card-title>
+      <ion-label>Facture n: </ion-label> <span> {{ facture.id}} </span>
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-label>Période: </ion-label> <span> {{facture.period}} </span>
+    <br />
+    <ion-label>Montant: </ion-label> <span>{{facture.amount}} dt</span>
+    <br />
+    <ion-label>Status: </ion-label>
+    <span
+      class="status"
+      [ngClass]="facture.status === 'Payée' ? 'paid' : 'unpaid'"
+      >{{facture.status}}</span
+    >
+  </ion-card-content>
+  <ion-button expand="block" class="payment-button">Payer</ion-button>
+</ion-card>
+} @empty {
+<div class="text-center mt-5">
+  <ion-label class="text-font-family">Aucune facture trouvée.</ion-label>
+</div>
+}

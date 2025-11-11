@@ -1,0 +1,25 @@
+.card-bg {
+  background-color: #f6f6f7;
+}
+
+.unpaid {
+  background-color: #f2781f;
+  color: white;
+}
+
+.paid {
+  background-color: #34a853;
+  color: white;
+}
+
+.status {
+  padding: 3px 5px;
+  border-radius: 15px;
+}
+
+.payment-button {
+  background-color: #0f4ba7;
+  color: white;
+  border-radius: 20px;
+  font-family: NeoSansProRegular, serif;
+}
