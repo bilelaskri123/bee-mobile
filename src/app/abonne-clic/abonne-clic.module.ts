@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AbonneClicPageRoutingModule } from './abonne-clic-routing.module';
 
 import { AbonneClicPage } from './abonne-clic.page';
+import { AbonneClicOffersComponent } from '../abonne-clic-offers/abonne-clic-offers.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AbonneClicPageRoutingModule
+    AbonneClicPageRoutingModule,
   ],
-  declarations: [AbonneClicPage]
+  declarations: [AbonneClicPage, AbonneClicOffersComponent],
 })
 export class AbonneClicPageModule {}

@@ -8,11 +8,6 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'folder/:id',
-    loadChildren: () =>
-      import('./folder/folder.module').then((m) => m.FolderPageModule),
-  },
-  {
     path: 'welcome',
     loadChildren: () =>
       import('./welcome/welcome.module').then((m) => m.WelcomePageModule),
@@ -51,18 +46,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./dashboard-menu/dashboard-menu.module').then(
         (m) => m.DashboardMenuPageModule
-      ),
-  },
-  {
-    path: 'account',
-    loadChildren: () =>
-      import('./account/account.module').then((m) => m.AccountPageModule),
-  },
-  {
-    path: 'add-abonnement',
-    loadChildren: () =>
-      import('./add-abonnement/add-abonnement.module').then(
-        (m) => m.AddAbonnementPageModule
       ),
   },
   {
