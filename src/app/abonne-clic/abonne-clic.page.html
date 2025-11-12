@@ -8,5 +8,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-abonne-clic-offers></app-abonne-clic-offers>
+  @if (step === 1) {
+  <app-abonne-clic-offers
+    (selectOfferEvent)="onSelectOffer($event)"
+  ></app-abonne-clic-offers>
+  } @else if (step === 2) {
+  <app-abonne-clic-first-form></app-abonne-clic-first-form>
+  } @else if (step === 3) {
+  <app-abonne-clic-second-form></app-abonne-clic-second-form>
+  } @else if(step === 4) {
+  <app-abonne-clic-third-form></app-abonne-clic-third-form>
+  }
 </ion-content>

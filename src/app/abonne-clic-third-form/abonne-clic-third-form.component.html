@@ -1,0 +1,77 @@
+<form [formGroup]="searchForm" class="m-4">
+  <ion-input
+    label="Contact GSM"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Contact GSM"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Email"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Email"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Date Etablissement"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Date Etablissement"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Lieu Etablissement"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Lieu Etablissement"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Frequence de facturation"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Frequence de facturation"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Reference Pack"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Reference Pack"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Code Poste Tunisie"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Code Poste Tunisie"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Localité"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Localité"
+    class="input-margin text-font-family"
+  ></ion-input>
+</form>
+
+<ion-footer class="my-custom-footer ion-no-border footer-position">
+  <div class="text-center">
+    <button
+      class="btn btn-custom text-font-family"
+      type="submit"
+      (click)="onSubmit()"
+    >
+      Valider
+    </button>
+  </div>
+</ion-footer>

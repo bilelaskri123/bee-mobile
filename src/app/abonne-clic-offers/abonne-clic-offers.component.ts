@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, output } from '@angular/core';
 
 @Component({
   selector: 'app-abonne-clic-offers',
@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./abonne-clic-offers.component.scss'],
 })
 export class AbonneClicOffersComponent implements OnInit {
+  selectOfferEvent = output<{
+    offer: string;
+    price: number;
+  }>();
   constructor() {}
 
   ngOnInit() {}
+
+  selectOffer(offer: string, price: number) {
+    this.selectOfferEvent.emit({ offer, price });
+  }
 }

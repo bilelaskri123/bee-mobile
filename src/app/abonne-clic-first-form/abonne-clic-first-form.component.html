@@ -1,0 +1,77 @@
+<form [formGroup]="searchForm" class="m-4">
+  <ion-input
+    label="Type identifiant"
+    label-placement="floating"
+    fill="outline"
+    placeholder="CIN, PASSPORT"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Civilité"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Mr, Mme"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Nom"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Nom"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Prénom"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Prénom"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Date de naissance"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Date de naissance"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Nationalité"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Nationalité"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Téléphone"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Téléphone"
+    class="input-margin text-font-family"
+  ></ion-input>
+
+  <ion-input
+    label="Téléphone Abonnement"
+    label-placement="floating"
+    fill="outline"
+    placeholder="Téléphone Abonnement"
+    class="input-margin text-font-family"
+  ></ion-input>
+</form>
+
+<ion-footer class="my-custom-footer ion-no-border footer-position">
+  <div class="text-center">
+    <button
+      class="btn btn-custom text-font-family"
+      type="submit"
+      (click)="onSubmit()"
+    >
+      Suivant
+    </button>
+  </div>
+</ion-footer>

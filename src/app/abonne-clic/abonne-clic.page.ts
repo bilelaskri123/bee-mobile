@@ -10,4 +10,9 @@ export class AbonneClicPage implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  onSelectOffer(event: { offer: string; price: number }) {
+    console.log('Selected offer:', event.offer, 'with price:', event.price);
+    this.step = 2;
+  }
 }
