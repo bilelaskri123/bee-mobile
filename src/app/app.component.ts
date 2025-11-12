@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Mes Factures', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Paiements Express', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Assistance', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Abonné fi clic', url: '/folder/archived', icon: 'archive' },
+    { title: 'Mes Factures', url: '/factures', icon: 'mail' },
+    {
+      title: 'Paiements Express',
+      url: '/paiement-express',
+      icon: 'paper-plane',
+    },
+    { title: 'Assistance', url: '/assistance', icon: 'heart' },
+    { title: 'Abonné fi clic', url: '/abonne-clic', icon: 'archive' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
