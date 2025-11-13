@@ -8,27 +8,27 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AbonneClicFirstFormComponent implements OnInit {
   searchForm: FormGroup;
-  formChange = output<{
+  firstFormChange = output<{
     fixNumber: string;
     cin: string;
   }>();
   constructor() {
     this.searchForm = new FormGroup({
-      fixNumber: new FormControl('', [Validators.required]),
-      cin: new FormControl('', [Validators.required]),
+      // fixNumber: new FormControl('', [Validators.required]),
+      // cin: new FormControl('', [Validators.required]),
     });
   }
 
   ngOnInit() {}
 
   onSubmit() {
-    if (this.searchForm.valid) {
-      this.formChange.emit({
-        fixNumber: this.searchForm.value.fixNumber,
-        cin: this.searchForm.value.cin,
-      });
-    } else {
-      console.log('Form is invalid');
-    }
+    this.firstFormChange.emit({
+      fixNumber: this.searchForm.value.fixNumber,
+      cin: this.searchForm.value.cin,
+    });
+    // if (this.searchForm.valid) {
+    // } else {
+    //   console.log('Form is invalid');
+    // }
   }
 }

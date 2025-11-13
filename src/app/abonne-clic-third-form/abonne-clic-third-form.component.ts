@@ -14,8 +14,8 @@ export class AbonneClicThirdFormComponent implements OnInit {
   }>();
   constructor() {
     this.searchForm = new FormGroup({
-      fixNumber: new FormControl('', [Validators.required]),
-      cin: new FormControl('', [Validators.required]),
+      // fixNumber: new FormControl('', [Validators.required]),
+      // cin: new FormControl('', [Validators.required]),
     });
   }
 

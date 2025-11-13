@@ -15,4 +15,14 @@ export class AbonneClicPage implements OnInit {
     console.log('Selected offer:', event.offer, 'with price:', event.price);
     this.step = 2;
   }
+
+  onFirstFormChange(event: { fixNumber: string; cin: string }) {
+    console.log('First Form Data:', event);
+    this.step = 3;
+  }
+
+  onSecondFormChange(event: { fixNumber: string; cin: string }) {
+    console.log('Second Form Data:', event);
+    this.step = 4;
+  }
 }

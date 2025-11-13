@@ -13,9 +13,13 @@
     (selectOfferEvent)="onSelectOffer($event)"
   ></app-abonne-clic-offers>
   } @else if (step === 2) {
-  <app-abonne-clic-first-form></app-abonne-clic-first-form>
+  <app-abonne-clic-first-form
+    (firstFormChange)="onFirstFormChange($event)"
+  ></app-abonne-clic-first-form>
   } @else if (step === 3) {
-  <app-abonne-clic-second-form></app-abonne-clic-second-form>
+  <app-abonne-clic-second-form
+    (secondFormChange)="onSecondFormChange($event)"
+  ></app-abonne-clic-second-form>
   } @else if(step === 4) {
   <app-abonne-clic-third-form></app-abonne-clic-third-form>
   }
